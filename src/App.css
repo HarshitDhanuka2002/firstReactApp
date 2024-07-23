@@ -1,38 +1,329 @@
-.App {
-  text-align: center;
+body {
+  padding: 0;
+  margin: 0;
+}
+.navBar{
+  display: flex;
+  padding: 0 60px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #faf9f8;
+  height: 100px;
+}
+.navLinks,.footerLinks,.blogLinks {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  /* width: fit-content; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navLinks li{
+  margin: 0 50px;
+  transition: text-decoration 0.6s;
+  text-underline-offset: 15px;
+}
+.navLinks li:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.nav-btn {
+  background-color:black;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 40px;
+  border: 2px solid;
+  transition: all 0.3s;
+}
+.nav-btn:hover {
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+}
+.logo{
+  width: 250px;
+}
+.logo:hover{
+  cursor: default;
+}
+.homeBody{
+  display: flex;
+  border: 2px solid black;
+  border-width: 2px 0;
+  font-family: "Libre Caslon Text", serif;
+}
+.homeBodyTitle {
+  font-size: 60px;
+}
+.homeBodyLeft{
+  width: 100%;
+  background-color: #E8E3DE;
+  height: calc(100vh - 160px);
+  display: flex;
+  padding-left: 100px;
+  flex-direction: column;
+  justify-content: center;
+}
+.homeBodyLeft p {
+  margin: 30px 0 60px;
+}
+.homeBody img{
+  width:50%;
+}
+.homeBody-btn {
+  background-color:black;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 40px;
+  width: 200px;
+  border: 2px solid;
+  transition: all 0.3s;
+}
+.homeBody-btn:hover {
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+}
+.blogPage {
+  height:calc(100vh - 100px);
+  background-color: #E8E3DE;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.blogTitle{
+  display: flex;
+  padding: 0 40px 0;
+  /* justify-content: space-between; */
+  align-items: center;
+  /* background-color: #E8E3DE; */
+  height: 100px;
+}
+.blogs{
+  font-family: "Libre Caslon Text", serif;
+  font-size: 50px;
+  margin:0 90px 0 90px;
+}
+.blogs:hover{
+  cursor: default;
+}
+.blogLinks li{
+  margin: 0 25px;
+  /* font-family: Cochin, Georgia, Times, 'Times New Roman', serif; */
+  font-size:20px;
+}
+.blogLinks li:hover{
+  cursor: pointer;
+}
+.blogCont {
+  /* background-color: #E8E3DE; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top:-10px;
+}
+.blogsCard{
+  width:350px;
+  margin: 20px;
+  padding: 25px 25px 10px 25px;
+  background-color: #faf9f8;
+  border-radius: 20px;
+  text-align:center;
+  transition: box-shadow 1s;
+}
+.blogsCard:hover{
+  cursor: pointer;
+  box-shadow: 0 0 20px black;
+}
+.blogsCardTitle{
+  font-family: "Biryani", sans-serif;
+  font-size: 30px;
+}
+.blogsCardDescription{
+  font-family: "Forum", serif;
+}
+
+.blogsCardWriter{
+  font-family: "Forum", serif;
+  float:right;
+  margin-right: 15px;
+  margin-top: 30px;
+}
+
+.blogsCard img{
+  width:100%;
+  height: 250px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  object-fit: fill;
+  transition: box-shadow 1s;
   }
+.blogsCard img:hover{
+  box-shadow: 0 0 20px black;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contactBody{
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f6f4f3;
+  /* border: 2px solid black; */
+  /* border-width: 2px 0; */
+  /* font-family: "Libre Caslon Text", serif; */
+}
+.contactBodyLeft{
+  background-color: #f6f4f3;
   display: flex;
   flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  /* justify-content: center; */
+}
+.contactBodyTitle {
+  font-size: 50px;
+  font-weight: bold;
+}
+.contactBodyEmail {
+  font-size: 20px;
+  font-weight: bold;
+}
+.contactForm-btn {
+  background-color:black;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 40px;
+  margin-top: 10px;
+  width: 200px;
+  border: 2px solid;
+  transition: all 0.3s;
+  align-self: flex-end;
+}
+.contactForm-btn:hover {
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+}
+.contactBodyForm{
+  display: flex;
+  flex-direction: column;
+}
+
+.contactBodyForm input{
+  width: 400px;
+  height:50px;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background-color: #d1c8c1;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+.contactBodyForm textarea {
+  width: 400px;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: none;
+  outline:none;
+  background-color: #d1c8c1;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+.contactBodyForm input::placeholder, .contactBodyForm textarea::placeholder{
+  color:rgba(0, 0, 0, 0.805);
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+.abtPage {
+  position: relative;
+}
+.abtContainer {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Libre Caslon Text", serif;
+}
+.bgdiv {
+  position: absolute;
+  top: 0;
+  width: calc(100vw - 400px);
+  height: 200px;
+  background-color: #E8E3DE;
+  z-index: -1;
+}
+.profile {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.profile img {
+  width: 350px;
+  height: 250px;
+  object-fit: cover;
+}
+.profileData {
+  margin-left: 60px;
+}
+.profileData h1 {
+  font-weight: 100;
+  line-height: 40px;
+  font-size: 60px;
+}
+.profileData p {
+  font-size: 40px;
+}
+.abtBody{
+  margin: 10px 150px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Libre Caslon Text", serif;
+}
+.abtBody p{
+  line-height: 25px;
+  text-align: justify;
+}
+.abtFooter{
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.abtFooter div{
+  font-size: 30px;
+}
+.abt-btn {
+  background-color:white;
+  color: black;
+  padding: 10px 40px;
+  border-radius: 40px;
+  width: 200px;
+  border: 2px solid;
+  transition: all 0.3s;
+  align-self: flex-end;
+  margin-left: 30px;
+}
+.abt-btn:hover {
+  cursor: pointer;
+  border: 2px solid white;
+  background-color: black;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #faf9f8;
+    height: 60px;
   }
-  to {
-    transform: rotate(360deg);
+  .footerLinks li {
+    margin: 0 30px;
   }
+::-webkit-scrollbar {
+  display: none;
 }
